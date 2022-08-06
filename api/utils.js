@@ -12,3 +12,4 @@ function requireUser(req, res, next) {
 module.exports = {
   requireUser,
 };
+//does this need an else statment
