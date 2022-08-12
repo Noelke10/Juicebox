@@ -7,7 +7,7 @@ postsRouter.post("/", requireUser, async (req, res, next) => {
   const { title, content, tags = "" } = req.body;
 
   const tagArr = tags.trim().split(/\s+/);
-  const postData = { author: req.user.id, title, content };
+  const postData = { authorId: req.user.id, title, content };
 
   // only send the tags if there are some to send
   if (tagArr.length) {
